@@ -1,0 +1,23 @@
+{
+  "name": "futura/twill-geo",
+  "description": "A Twill CMS package",
+  "homepage": "futura.si",
+  "license": "MIT",
+  "require": {
+    "area17/twill": "^3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "futura\\TwillGeo\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "futura\\TwillGeo\\TwillGeoServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

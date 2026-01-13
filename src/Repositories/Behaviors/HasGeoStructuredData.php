@@ -15,7 +15,14 @@ trait HasGeoStructuredData {
             ?->structured_data;
 
         if ($this->isTranslatable()) {
-            return json_decode($structuredData, true)[app()->getLocale()];
+            $structuredData = json_decode($structuredData, true);
+            $locale = app()->getLocale();
+
+            if (is_array($structuredData) && isset($structuredData[$locale])) {
+                return $structuredData[$locale];
+            }
+
+            return null;
         }
 
         return $structuredData;

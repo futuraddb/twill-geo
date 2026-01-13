@@ -13,6 +13,7 @@ class Snippet extends Component {
      */
     public function __construct(
         public $item = null,
+        public ?string $geoStructuredData = null,
     )
     {
         if ($item &&
@@ -21,6 +22,10 @@ class Snippet extends Component {
             !$item->relationLoaded('translations')
         ) {
             $item->load('translations');
+        }
+
+        if ($item) {
+            $this->geoStructuredData = $item->getGeoStructuredData();
         }
     }
 

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace futura\TwillGeo\View\Components;
+namespace futuraddb\TwillGeo\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;

@@ -16,7 +16,13 @@ Key features:
 
 ## Installation
 
-### 1. Publish Assets and Config
+### 1. Install package
+
+```bash
+composer require futuraddb/twill-geo
+```
+
+### 2. Publish Assets and Config
 
 To use the package, you need to publish the assets:
 
@@ -30,7 +36,7 @@ Optionally, you can also publish the configuration file:
 php artisan vendor:publish --tag=twill-geo-config
 ```
 
-### 2. Update Twill Assets
+### 3. Update Twill Assets
 
 After publishing the assets, you need to rebuild Twill's assets:
 
@@ -38,7 +44,7 @@ After publishing the assets, you need to rebuild Twill's assets:
 php artisan twill:build
 ```
 
-### 3. Run Migrations
+### 4. Run Migrations
 
 The package includes a migration for the `geo_structured_data` table. If you declined running migrations during the `twill:build` step, run the migrations manually:
 
@@ -56,7 +62,7 @@ Set the `TWILL_GEO_OPENAI_API_KEY` env variable. Optionally you can also set `TW
 Add the `HasGeoStructuredData` trait to your Twill model:
 
 ```php
-use futura\TwillGeo\Repositories\Behaviors\HasGeoStructuredData;
+use futuraddb\TwillGeo\Repositories\Behaviors\HasGeoStructuredData;
 use A17\Twill\Models\Model;
 
 class Project extends Model
@@ -76,7 +82,7 @@ class Project extends Model
 Add the `HandleGeoStructuredData` trait to your Twill repository:
 
 ```php
-use futura\TwillGeo\Repositories\Behaviors\HandleGeoStructuredData;
+use futuraddb\TwillGeo\Repositories\Behaviors\HandleGeoStructuredData;
 
 class ProjectRepository extends ModuleRepository
 {
@@ -89,7 +95,7 @@ class ProjectRepository extends ModuleRepository
 Add the Geo fieldset to your Twill controller's `getForm` method:
 
 ```php
-use futura\TwillGeo\Helpers\GeoFormFieldset;
+use futuraddb\TwillGeo\Helpers\GeoFormFieldset;
 
 public function getForm(TwillModelContract $model): Form
 {

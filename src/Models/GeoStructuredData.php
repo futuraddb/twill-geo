@@ -1,6 +1,6 @@
 <?php
 
-namespace futura\TwillGeo\Models;
+namespace futuraddb\TwillGeo\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

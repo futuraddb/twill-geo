@@ -1,6 +1,6 @@
 <?php
 
-namespace futura\TwillGeo\Helpers;
+namespace futuraddb\TwillGeo\Helpers;
 
 use A17\Twill\Services\Forms\BladePartial;
 use A17\Twill\Services\Forms\Fieldset;

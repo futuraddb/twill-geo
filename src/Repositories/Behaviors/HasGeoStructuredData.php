@@ -1,8 +1,8 @@
 <?php
 
-namespace futura\TwillGeo\Repositories\Behaviors;
+namespace futuraddb\TwillGeo\Repositories\Behaviors;
 
-use futura\TwillGeo\Models\GeoStructuredData;
+use futuraddb\TwillGeo\Models\GeoStructuredData;
 
 trait HasGeoStructuredData {
 

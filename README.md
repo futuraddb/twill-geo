@@ -8,6 +8,12 @@ Key features:
 - **Custom Twill Form fieldset**: ready-to-use fieldset that includes a custom form field that allows for both manual entry and AI-powered generation of geo-structured data.
 - **Frontend Component**: Includes a ready-to-use Blade component for outputting the saved data as JSON-LD in your frontend templates.
 
+## Requirements
+
+- **PHP**: `^8.1`
+- **Laravel (Illuminate/Support)**: `^10.0`
+- **Twill**: `^3.0`
+
 ## Installation
 
 ### 1. Publish Assets and Config

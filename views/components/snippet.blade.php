@@ -1,5 +1,5 @@
-@if($geo)
+@if($item)
     <script type="application/ld+json">
-        {!! $geo !!}
+        {!! $item->getGeoStructuredData() !!}
     </script>
 @endif

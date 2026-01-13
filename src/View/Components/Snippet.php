@@ -13,13 +13,15 @@ class Snippet extends Component {
      */
     public function __construct(
         public $item = null,
-        public string|null $geo = null,
     )
     {
-        if ($item && method_exists($item, 'relationLoaded') && !$item->relationLoaded('translations')) {
+        if ($item &&
+            $item->isTranslatable() &&
+            method_exists($item, 'relationLoaded') &&
+            !$item->relationLoaded('translations')
+        ) {
             $item->load('translations');
         }
-        $this->geo = $item?->geo ?? null;
     }
 
     /**

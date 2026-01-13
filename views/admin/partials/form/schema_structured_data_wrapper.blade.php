@@ -1,5 +1,5 @@
 @php
-    $fieldName = $fieldName ?? 'geo';
+    $fieldName = $item::getTwillModelFieldNameForGeoStructuredData();
     $fieldLabel = $fieldLabel ?? 'Structured data';
     $translated = $translated ?? false;
 @endphp

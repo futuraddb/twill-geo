@@ -12,6 +12,8 @@ class TwillGeoServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+
         $this->loadViewsFrom(__DIR__ . '/../views', 'twill-geo');
         Blade::componentNamespace('futura\\TwillGeo\\View\\Components', 'twill-geo');
 
@@ -20,15 +22,7 @@ class TwillGeoServiceProvider extends ServiceProvider
         ], 'twill-geo-config');
         $this->publishes([
             __DIR__.'/../assets' => resource_path('assets'),
-        ], 'twill-assets');
-        // readme:
-        // php artisan vendor:publish --tag=twill-assets
-        // php artisan twill:build
-        // php artisan migrate (if you declined migration in a twill:build step)
-        // add ->addFieldset(GeoFormFieldset::getFieldset()) into Twill's form controller
-        // add <x-twill-geo::snippet :item="$item ?? null" /> to layout
-        // upgrade:
-        //      - llm model selector in Twill's form field
+        ], 'twill-geo-assets');
     }
 
     /**

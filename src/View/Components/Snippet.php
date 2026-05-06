@@ -24,7 +24,9 @@ class Snippet extends Component {
             $item->load('translations');
         }
 
-        if ($item) {
+        if ($item &&
+            method_exists($item, 'geoStructuredData')
+        ) {
             $this->geoStructuredData = $item->getGeoStructuredData();
         }
     }

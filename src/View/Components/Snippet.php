@@ -25,7 +25,7 @@ class Snippet extends Component {
         }
 
         if ($item &&
-            method_exists($item, 'geoStructuredData')
+            method_exists($item, 'getGeoStructuredData')
         ) {
             $this->geoStructuredData = $item->getGeoStructuredData();
         }

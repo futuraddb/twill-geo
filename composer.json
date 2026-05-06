@@ -1,7 +1,7 @@
 {
   "name": "futuraddb/twill-geo",
   "description": "This package allows you to easily manage Geo Structured Data (JSON-LD) for your Twill models.",
-  "homepage": "futura.si",
+  "homepage": "https://futura.si",
   "license": "MIT",
   "require": {
     "php": "^8.1",
